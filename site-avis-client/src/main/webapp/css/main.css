@@ -1,0 +1,403 @@
+.aui#interiale .portlet-ite-site-site-avis-client-portlet .container-fluid {
+	/*padding-left: 0px;*/
+	padding-right: 0px;
+}
+
+@media only screen and (max-width: 480px) {
+	.aui#interiale .portlet-ite-site-avis-client-note-globale-portlet .innerpage h2 {
+	    font-size: 28px;
+	}
+}
+
+/* Liste des avis sur le site Intériale */
+
+.liste-site-avis-interiale {
+	font-weight: 100 !important;
+}
+
+.liste-avis-interiale .avis-zone {
+	background: url(../images/u4.png) no-repeat;
+	margin-left: -35px;
+	min-height: 124px !important;
+	background-size: 820px;
+}
+
+.liste-avis-interiale .col-avis-interiale {
+	margin-bottom: 15px;
+}
+
+.liste-avis-interiale .avis-zone .opened-quotes {
+	float: left;
+	position: absolute;
+    top: 5px;
+}
+
+.liste-avis-interiale .avis-zone .paragraph {
+	color: #FFF;
+	margin-left: 25px;
+}
+
+.liste-avis-interiale .avis-zone .paragraph span {
+	color: #FFF;
+	font-size: 13px;
+}
+
+.liste-avis-interiale .avis-zone .closed-quotes {
+	float: right;
+	position: absolute;
+    right: 15px;
+    bottom: 5px;
+}
+
+.liste-avis-interiale .no-padding-rl {
+	padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.liste-avis-interiale .box2 {
+    background-color: rgba(242, 242, 242, 1);
+    height: 124px;
+}
+
+.liste-site-avis-interiale .col-avis-interiale .avis-zone .col-xs-10-custom {
+	padding-top: 18px;
+	width: 78% !important;
+}
+
+.liste-site-avis-interiale .col-avis-interiale .avis-zone .etoile {
+	width: 22px;
+    height: 21px;
+}
+
+.liste-site-avis-interiale .col-avis-interiale .avis-zone .col-xs-10-custom span {
+	font-size: 12px;
+	color: #FFF;
+}
+
+.liste-site-avis-interiale .col-avis-interiale .avis-zone .col-xs-10-custom span.bold {
+	font-weight: bold !important;
+	font-size: 14px;
+}
+
+.liste-site-avis-interiale .avis-zone .paragraph {
+	padding-left: 0px;
+	font-size: 12px;
+	margin-left: 15px;
+}
+
+.liste-site-avis-interiale .avis-zone .paragraph p {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;;
+}
+
+.liste-site-avis-interiale .avis-zone .paragraph span {
+	font-size: 12px;
+}
+
+.liste-site-avis-interiale .avis-zone {
+	padding-right: 0px !important;	
+	padding-left: 0px !important;
+}
+
+@media only screen and (min-width: 768px) {
+	.liste-site-avis-interiale .avis-zone {
+		width: 87.5% !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.liste-site-avis-interiale .avis-zone {
+		background-color: #058ec4 !important;
+		margin-left: 0px;
+		width: 100% !important;
+	}
+}
+
+.liste-site-avis-interiale .reponse-zone {
+	background-color: #058EC4;
+	margin-left: -35px;
+	width: 87.5% !important;
+	padding-right: 0px !important;
+}
+
+@media only screen and (max-width: 767px) {
+	.liste-site-avis-interiale .reponse-zone {
+		background-color: #058ec4 !important;
+		margin-left: 0px;
+		width: 100% !important;
+	}
+}
+
+.liste-site-avis-interiale .read-more {
+	position: absolute;
+	right: 15px;
+    bottom: 5px;
+    font-size: 12px;
+}
+
+.liste-site-avis-interiale .read-more a {
+	color: #FFF !important;
+}
+
+.liste-site-avis-interiale .leftbar .form-filter {
+	padding-bottom:15px;
+}
+
+.liste-site-avis-interiale .leftbar .form-filter .button-box {
+	padding-top: 0px !important;
+	padding-right: 15px;
+}
+
+.aui#interiale .liste-site-avis-interiale .leftbar .form-filter .button-box a {
+	margin: 0px;
+	float: right;
+	background-color: #f8a523;
+	border-color: #f8a523;
+	color: #FFF;
+}
+
+
+.aui#interiale .liste-site-avis-interiale .col-avis-interiale-reponse {
+	margin-top: -17px;
+	padding-left: 0px;
+   	padding-right: 0px !important;
+}
+
+
+.aui#interiale .liste-site-avis-interiale .leftbar .form-filter .button-box a:hover {
+	background-color: #FFF;
+	border-color: #f8a523;
+	color: #f8a523;
+}
+
+.liste-site-avis-interiale .col-avis-interiale .avis-zone .col-xs-2-custom {
+	float: right !important;
+    width: 21%!important;
+    padding-left: 20px !important;
+    padding-top: 10px;
+    padding-right: 0px !important;
+}
+
+.liste-site-avis-interiale .avis-zone .paragraph .avisDetail {
+	padding-bottom: 50px;
+}
+
+.liste-site-avis-interiale .avis-zone .paragraph .avisSynthese {
+	padding-bottom: 20px;
+}
+
+.liste-site-avis-interiale .box2 {
+    min-height: 140px !important;
+}
+
+.liste-site-avis-interiale .avis-zone {
+	min-height: 140px !important;
+}
+
+.liste-site-avis-interiale .searchcontainer {
+	display: none;
+}
+
+.liste-site-avis-interiale .avis-sort,
+.liste-site-avis-interiale .avis-sort:focus {
+	height:46px;
+	border: 3px #1473c7 solid;
+	font-size: 15px !important;
+    font-weight: 400 !important;
+    font-family: Museo500 !important;
+    width: 260px;
+    max-width: initial;
+}
+
+.liste-site-avis-interiale #avis-sort option {
+	font-size: 15px;
+	font-weight : 400;
+	font-family: Museo500;
+}
+
+/* */
+/* Afficher la réponse d'Intériale */
+/* */
+.liste-site-avis-interiale .col-avis-interiale .reponse-zone .col-xs-10-custom {
+	padding-top: 5px;
+	width: 78% !important;;
+}
+
+.liste-site-avis-interiale .col-avis-interiale .reponse-zone .col-xs-2-custom .etoile {
+	width: 22px;
+    height: 21px;
+}
+
+.liste-site-avis-interiale .col-avis-interiale .reponse-zone .col-xs-10-custom span {
+	font-size: 12px;
+	color: #FFF;
+}
+
+.liste-site-avis-interiale .col-avis-interiale .reponse-zone .paragraph span.bold {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.liste-site-avis-interiale .reponse-zone .paragraph {
+	padding-left: 0px;
+	font-size: 12px;
+	margin-left: 15px;
+	color: #FFF !important;
+}
+
+.liste-site-avis-interiale .reponse-zone .paragraph p {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.liste-site-avis-interiale .reponse-zone .paragraph span {
+	font-size: 12px;
+	color: #FFF !important;
+}
+
+.liste-site-avis-interiale .reponse-zone {
+	padding-right: 0px !important;	
+	padding-left: 0px !important;
+}
+
+.liste-site-avis-interiale .col-avis-interiale .reponse-zone .col-xs-2-custom {
+	float: right !important;
+    width: 21%!important;
+    padding-left: 33px !important;
+    padding-top: 10px;
+    padding-right: 0px !important;
+}
+
+.liste-site-avis-interiale .reponse-zone {
+	min-height: 140px !important;
+}
+
+.liste-site-avis-interiale .read-reponse {
+	position: absolute;
+	right: 15px;
+    bottom: 5px;
+    font-size: 12px;
+}
+
+.liste-site-avis-interiale .read-reponse a {
+	color: #FFF !important;
+}
+
+.liste-asite-avis-interiale .reponse-text {
+	color: #FFF !important;
+}
+
+
+/* ************** */
+/* Poster un avis */
+/* ************** */
+.etoile {
+	height: 30px;
+	float: left;
+	width: 27px;
+	display: block;
+}
+
+.etoile-blanche {
+	background: url(../images/etoile_blanche.png) no-repeat;
+}
+
+.etoile-jaune {
+	background: url(../images/etoile_jaune2.png) no-repeat;
+}
+
+.form-posterAvis .boutons_valider {
+	background-color: rgba(248, 165, 35, 1);
+	color: #FFF;
+}
+
+.form-posterAvis .pan-title span.num {
+	margin-right:15px;
+}
+
+.form-posterAvis .form-steps-pages .aide {
+	font-style: italic;
+    font-size: 11px;
+    font-family: Arial;
+    color: #999999;
+    font-weight: normal;
+}
+
+.form-posterAvis .submit-button-group {
+	margin-bottom: 15px; 
+	margin-top: 15px;
+	color: #FFF;
+}
+
+.aui#interiale .form-posterAvis .num {
+	width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    height: 43px;
+}
+
+.aui#interiale .form-posterAvis .num1 {
+	background: url(../images/num1.png) no-repeat;
+}
+.aui#interiale .form-posterAvis .num2 {
+	background: url(../images/num2.png) no-repeat;
+}
+.aui#interiale .form-posterAvis .num3 {
+	background: url(../images/num3.png) no-repeat;
+}
+
+.aui#interiale .form-posterAvis .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #CCCCCC;
+    font-weight: normal;
+}
+.aui#interiale .form-posterAvis .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   	color: #CCCCCC;
+   	font-weight: normal;
+}
+.aui#interiale .form-posterAvis .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #CCCCCC;
+    font-weight: normal;
+}
+.aui#interiale .form-posterAvis .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #CCCCCC;
+    font-weight: normal;
+}
+
+.aui#interiale .form-posterAvis .form-control {
+	/*color: #CCCCCC;*/
+    font-weight: normal;
+}
+
+/* ******************** */
+/* Administrer les avis */
+/* ******************** */
+.avis-administration .lfr-pagination-delta-selector {
+	display: none !important;
+}
+
+.avis-administration .lfr-pagination-page-selector .lfr-icon-menu a {
+	width: 200px !important;
+    font-size: 16px !important;
+}
+
+.avis-administration .lfr-pagination-page-selector .lfr-icon-menu a span {
+	margin-right: 5px !important;
+}
+
+.avis-administration small.search-results {
+	padding-top: 5px !important;
+    font-size: 14px !important;
+}
+
+.aui#interiale .avis-administration input.admin-button {
+    margin-bottom: 5px;
+}
+
+.aui#interiale .pan .pan-title h3.avis-title-zone {
+	color: #999999;
+    font-weight: unset;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+}

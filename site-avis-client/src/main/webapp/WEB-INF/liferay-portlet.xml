@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+    <portlet>
+        <portlet-name>ite-site-avis-client-portlet</portlet-name>
+        <show-portlet-access-denied>false</show-portlet-access-denied>
+        <private-session-attributes>false</private-session-attributes>
+        <ajaxable>true</ajaxable>
+        <header-portlet-css>/css/main.css</header-portlet-css>
+        <footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+        <css-class-wrapper>portlet-ite-site-avis-client-portlet</css-class-wrapper>
+    </portlet>
+    <portlet>
+        <portlet-name>ite-poster-avis-client-portlet</portlet-name>
+        <show-portlet-access-denied>false</show-portlet-access-denied>
+        <private-session-attributes>false</private-session-attributes>
+        <ajaxable>true</ajaxable>
+        <header-portlet-css>/css/main.css</header-portlet-css>
+        <footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+        <css-class-wrapper>portlet-ite-poster-avis-client-portlet</css-class-wrapper>
+    </portlet>
+    <portlet>
+        <portlet-name>ite-site-site-avis-client-portlet</portlet-name>
+        <show-portlet-access-denied>false</show-portlet-access-denied>
+        <private-session-attributes>false</private-session-attributes>
+        <ajaxable>true</ajaxable>
+        <header-portlet-css>/css/main.css</header-portlet-css>
+        <footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+        <css-class-wrapper>portlet-ite-site-site-avis-client-portlet</css-class-wrapper>
+    </portlet>
+    
+    <portlet>
+        <portlet-name>ite-site-avis-client-admin-portlet</portlet-name>
+        <show-portlet-access-denied>false</show-portlet-access-denied>
+        <private-session-attributes>false</private-session-attributes>
+        <ajaxable>true</ajaxable>
+        <header-portlet-css>/css/main.css</header-portlet-css>
+        <footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+        <css-class-wrapper>portlet-ite-site-avis-client-admin-portlet</css-class-wrapper>
+    </portlet>
+    <portlet>
+        <portlet-name>ite-site-avis-client-note-admin-portlet</portlet-name>
+        <show-portlet-access-denied>false</show-portlet-access-denied>
+        <private-session-attributes>false</private-session-attributes>
+        <ajaxable>true</ajaxable>
+        <css-class-wrapper>portlet-ite-site-avis-client-note-admin-portlet</css-class-wrapper>
+    </portlet>
+    
+    <portlet>
+        <portlet-name>ite-site-avis-client-note-globale-portlet</portlet-name>
+        <show-portlet-access-denied>false</show-portlet-access-denied>
+        <private-session-attributes>false</private-session-attributes>
+        <ajaxable>true</ajaxable>
+        <css-class-wrapper>portlet-ite-site-avis-client-note-globale-portlet</css-class-wrapper>
+    </portlet>
+    
+    <portlet>
+        <portlet-name>ite-site-avis-client-import-donnees-portlet</portlet-name>
+        <show-portlet-access-denied>false</show-portlet-access-denied>
+        <private-session-attributes>false</private-session-attributes>
+        <ajaxable>true</ajaxable>
+        <css-class-wrapper>portlet-ite-site-avis-client-import-donnees-portlet</css-class-wrapper>
+    </portlet>
+    
+    <role-mapper>
+        <role-name>administrator</role-name>
+        <role-link>Administrator</role-link>
+    </role-mapper>
+    <role-mapper>
+        <role-name>guest</role-name>
+        <role-link>Guest</role-link>
+    </role-mapper>
+    <role-mapper>
+        <role-name>power-user</role-name>
+        <role-link>Power User</role-link>
+    </role-mapper>
+    <role-mapper>
+        <role-name>user</role-name>
+        <role-link>User</role-link>
+    </role-mapper>
+</liferay-portlet-app>

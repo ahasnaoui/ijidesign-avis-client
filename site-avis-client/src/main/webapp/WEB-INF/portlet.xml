@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+                        http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+	<portlet>
+		<description>Portlet Site Avis Client</description>
+		<portlet-name>ite-site-avis-client-portlet</portlet-name>
+		<display-name>Site Avis Client Portlet</display-name>
+
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/siteAvisClientPortlet.xml</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view.jsp</value>
+		</init-param>
+		
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		
+		<supported-locale>fr</supported-locale>
+
+		<portlet-info>
+			<title>Site Avis Client Portlet</title>
+			<short-title>Site Avis Client</short-title>
+			<keywords>site,avis,client</keywords>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<description>Portlet Poster Avis Client</description>
+		<portlet-name>ite-poster-avis-client-portlet</portlet-name>
+		<display-name>Poster Avis Client Portlet</display-name>
+
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/posterAvisClientPortlet.xml</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view.jsp</value>
+		</init-param>
+		
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		
+		<supported-locale>fr</supported-locale>
+
+		<portlet-info>
+			<title>Poster Avis Client Portlet</title>
+			<short-title>Poster Avis Client</short-title>
+			<keywords>poster,avis,client</keywords>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<description>Portlet Site Avis Client du mini site</description>
+		<portlet-name>ite-site-site-avis-client-portlet</portlet-name>
+		<display-name>Site Avis Client du mini site Portlet</display-name>
+
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/siteSiteAvisClientPortlet.xml</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view.jsp</value>
+		</init-param>
+		
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		
+		<supported-locale>fr</supported-locale>
+
+		<portlet-info>
+			<title>Site Avis Client Portlet du mini site</title>
+			<short-title>Site Avis Client</short-title>
+			<keywords>site,avis,client</keywords>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<description>Portlet Admin Site Avis Client</description>
+		<portlet-name>ite-site-avis-client-admin-portlet</portlet-name>
+		<display-name>Site Avis Client Admin Portlet</display-name>
+
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/siteAvisClientAdminPortlet.xml</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view.jsp</value>
+		</init-param>
+		
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		
+		<supported-locale>fr</supported-locale>
+
+		<portlet-info>
+			<title>Site Avis Client Admin Portlet</title>
+			<short-title>Site Avis Client Admin</short-title>
+			<keywords>site,avis,client,admin</keywords>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<description>Portlet Admin Site Avis Client - Note par items</description>
+		<portlet-name>ite-site-avis-client-note-admin-portlet</portlet-name>
+		<display-name>Site Avis Client Note Admin Portlet</display-name>
+
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/siteAvisClientNoteAdminPortlet.xml</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view.jsp</value>
+		</init-param>
+		
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		
+		<supported-locale>fr</supported-locale>
+
+		<portlet-info>
+			<title>Site Avis Client Note par items Portlet</title>
+			<short-title>Site Avis Client Notes Admin</short-title>
+			<keywords>site,avis,client,admin,notes</keywords>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<description>Portlet Site Avis Client - Note globale</description>
+		<portlet-name>ite-site-avis-client-note-globale-portlet</portlet-name>
+		<display-name>Site Avis Client Note Globale Portlet</display-name>
+
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/siteAvisClientNoteGlobalePortlet.xml</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view.jsp</value>
+		</init-param>
+		
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		
+		<supported-locale>fr</supported-locale>
+
+		<portlet-info>
+			<title>Site Avis Client Note Globale Portlet</title>
+			<short-title>Site Avis Client Note Globale</short-title>
+			<keywords>site,avis,client,note,globale,bandeau</keywords>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<description>Portlet Site Avis Client - Initialisation des données</description>
+		<portlet-name>ite-site-avis-client-import-donnees-portlet</portlet-name>
+		<display-name>Site Avis Client Import avis Portlet</display-name>
+
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/siteAvisClientImportAvisPortlet.xml</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view.jsp</value>
+		</init-param>
+		
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		
+		<supported-locale>fr</supported-locale>
+
+		<portlet-info>
+			<title>Site Avis Client Import avis Portlet</title>
+			<short-title>Site Avis Client Import avis</short-title>
+			<keywords>site,avis,client,import,avis</keywords>
+		</portlet-info>
+	</portlet>
+	
+</portlet-app>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>fr.interiale.portlet</groupId>
+	<artifactId>ite-site-avis-client-portlet</artifactId>
+	<version>1.0.5-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>Portail Intériale - Site Avis Client Portlet</name>
+	<description>Module Site Avis Client Intériale</description>
+
+	<build>
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		<outputDirectory>${project.basedir}/target/classes</outputDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<encoding>UTF-8</encoding>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>3.2.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warName>${project.artifactId}</warName>
+					<packagingExcludes>
+						WEB-INF/lib/struts-liferay*.jar,
+						WEB-INF/lib/spring-2.5.6.SEC03.jar,
+						WEB-INF/lib/portal-client*.jar,
+						WEB-INF/lib/displaytag*.jar,
+						WEB-INF/lib/httpclient*.jar,
+						WEB-INF/lib/httpcore*.jar,
+						WEB-INF/lib/axis*.jar
+					</packagingExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>ite-site-avis-client-portlet</finalName>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>fr.interiale.ear</groupId>
+			<artifactId>mgpatInternetEJB</artifactId>
+			<version>2.1.2-RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>fr.interiale.utils</groupId>
+			<artifactId>commonWebUtils</artifactId>
+			<version>2.0.3-RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>fr.interiale.utils</groupId>
+			<artifactId>commonServiceUtils</artifactId>
+			<version>2.1.4-RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>fr.interiale.utils</groupId>
+			<artifactId>commonPortailAdherentUtils</artifactId>
+			<version>2.1.2-RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>struts-liferay</artifactId>
+					<groupId>fr.interiale.struts</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jbossall-client</artifactId>
+			<version>4.2.2.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc-portlet</artifactId>
+			<version>3.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>3.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>fr.liferay.interiale</groupId>
+			<artifactId>portlet</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>fr.interiale.portlet</groupId>
+			<artifactId>ite-liferay-custom-services-portlet-service</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- LIFERAY -->
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+			<version>6.2.3</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-bridges</artifactId>
+			<version>6.2.3</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-taglib</artifactId>
+			<version>6.2.3</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-java</artifactId>
+			<version>6.2.3</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+</project>
