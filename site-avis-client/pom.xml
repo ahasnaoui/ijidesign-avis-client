@@ -6,7 +6,7 @@
 
 	<groupId>fr.interiale.portlet</groupId>
 	<artifactId>ite-site-avis-client-portlet</artifactId>
-	<version>1.0.5-SNAPSHOT</version>
+	<version>1.0.6-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Portail Intériale - Site Avis Client Portlet</name>
 	<description>Module Site Avis Client Intériale</description>
