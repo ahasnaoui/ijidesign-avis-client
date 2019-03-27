@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- ===================================================================== -->
+<!-- -->
+<!-- Log4j Configuration -->
+<!-- -->
+<!-- ===================================================================== -->
+
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+	<!-- commenter pour la prod -->
+	<appender name="WEBSERVICE" class="org.jboss.logging.appender.RollingFileAppender">
+		<param name="File" value="/opt/jboss-4.2.2.GA/server/default/log/webservice.log" />
+		<param name="Threshold" value="TRACE" />
+		<param name="MaxBackupIndex" value="10" />
+		<param name="MaxFileSize" value="10MB" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ddMMyyyy HH:mm:ss} %-5p %C:%L+-->%m%n" />
+		</layout>
+	</appender>
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<errorHandler class="org.jboss.logging.util.OnlyOnceErrorHandler" />
+		<param name="Target" value="System.out" />
+		<param name="Threshold" value="INFO" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ddMMyyyy HH:mm:ss} %X{sessionId} %-5p %C:%L %m%n" />
+		</layout>
+	</appender>
+
+	<category name="org.apache.axis.transport.http.HTTPSender" additivity="false">
+		<priority value="TRACE" />
+		<appender-ref ref="WEBSERVICE" />
+	</category>
+	<root>
+		<appender-ref ref="CONSOLE" />
+
+	</root>
+</log4j:configuration>

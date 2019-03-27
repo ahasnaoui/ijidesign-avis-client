@@ -1,0 +1,44 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+<!-- 	DEV		-->
+	
+	<persistence-unit name="devisprospect" transaction-type="JTA">
+		  <jta-data-source>java:/devis</jta-data-source>
+		<class>fr.interiale.moteur.devis2013.ejb.SauvegardeDevis</class>
+		<properties>
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.PostgreSQLDialect" />
+				
+			<!--<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>-->
+			<!-- Valide ou exporte automatiquement le schéma DDL vers la base de données (validate | update | create | create-drop)-->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<!-- Formate et indente le sql dans la console et dans le log (false | true) -->
+			<property name="hibernate.format_sql" value="true" />
+			<!-- Définit la profondeur maximale d'un arbre de chargement par jointures ( 0 à 3 ) -->
+			<property name="hibernate.max_fetch_depth" value="0" />
+			<!-- Définit une taille par défaut pour le chargement par lot des associations (4 - 8 - 16) -->
+			<property name="hibernate.default_batch_fetch_size"
+				value="1" />
+			<!-- Si activé, Hibernate va collecter des statistiques utiles pour le réglage des performances (false | true) -->
+			<property name="hibernate.generate_statistics"
+				value="false" />
+			<!-- Détermine la taille de chargement des statements JDBC (appelle Statement.setFetchSize()). -->
+			<property name="hibernate.jdbc.fetch_size" value="1" />
+			<!-- Active l'utilisation par Hibernate des mises à jour par batch de JDBC2 (recommandé entre 5 et 30) -->
+			<property name="hibernate.jdbc.batch_size" value="1000" />
+			<!-- Specify when Hibernate should release JDBC connections (on_close (default) | after_transaction | after_statement | auto)-->
+			<property name="hibernate.connection.release_mode"
+				value="auto" />
+			<!-- Si activé, la session sera automatiquement fermé pendant la phase qui suit la fin de la transaction (true | false)-->
+			<property name="hibernate.transaction.auto_close_session"
+				value="true" />
+			<!-- gestion des transactions délégé a JBOSS -->
+			<property name="hibernate.transaction.manager_lookup_class"
+				value="org.hibernate.transaction.JBossTransactionManagerLookup" />
+			<!-- SQL visible -->
+			<property name="hiberbate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>
