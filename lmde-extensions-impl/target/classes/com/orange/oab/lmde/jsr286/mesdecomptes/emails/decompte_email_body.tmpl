@@ -1,0 +1,310 @@
+<!-- Partial  --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+  <title>My LMDE - Demande de réception de relevés PDF</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+  <!-- CSS Reset -->
+  <style type="text/css">
+  /* What it does: Remove spaces around the email design added by some email clients. */
+  /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  /* What it does: Stops email clients resizing small text. */
+  * {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* What it does: Forces Outlook.com to display emails full width. */
+  .ExternalClass { width: 100%; }
+
+  /* What is does: Centers email on Android 4.4 */
+  div[style*="margin: 16px 0"] { margin:0 !important; }
+
+  /* What it does: Stops Outlook from adding extra spacing to tables. */
+  table,
+  td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+  }
+
+  /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+  table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    Margin: 0 auto !important;
+  }
+  table table table { table-layout: auto; }
+
+  /* What it does: Uses a better rendering method when resizing images in IE. */
+  img { -ms-interpolation-mode:bicubic; }
+
+  /* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+  .yshortcuts a { border-bottom: none !important; }
+
+  /* What it does: Another work-around for iOS meddling in triggered links. */
+  a[x-apple-data-detectors] { color:inherit !important; }
+
+  /* Init p margin */
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  </style>
+
+  <!-- Progressive Enhancements -->
+  <style>
+  /* What it does: Hover styles for buttons */
+  .button-td,
+  .button-a {
+    transition: all 100ms ease-in;
+  }
+  .button-td:hover,
+  .button-a:hover {
+    background: #ED9245 !important;
+    border-color: #ED9245 !important;
+  }
+
+  /* Media Queries */
+  @media screen and (max-width: 500px) {
+
+    .email-container { width: 100% !important; }
+
+    /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+    .fluid,
+    .fluid-centered {
+      max-width: 100% !important;
+      height: auto !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    /* And center justify these ones. */
+    .fluid-centered {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* What it does: Forces table cells into full-width rows. */
+    .stack-column,
+    .stack-column-center {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      direction: ltr !important;
+    }
+    /* And center justify these ones. */
+    .stack-column-center {
+      text-align: center !important;
+    }
+
+    /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+    .center-on-narrow {
+      text-align: center !important;
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      float: none !important;
+    }
+    table.center-on-narrow { display: inline-block !important; }
+
+    .hide { display: none; }
+
+  }
+  </style>
+
+</head>
+<body bgcolor="#ffffff" width="100%" style="margin: 0;">
+  <table bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" style="border-collapse:collapse;">
+    <tbody><tr>
+      <td valign="top">
+        <center style="width: 100%;">
+
+          <!-- Visually Hidden Preheader Text : BEGIN -->
+          <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
+            My LMDE - Votre attestation
+          </div>
+          <!-- Visually Hidden Preheader Text : END -->
+
+          <!-- Email Header : BEGIN -->
+          <table bgcolor="#ffffff" align="center" width="100%">
+            <tr>
+              <td>
+                <table align="center" width="700" class="email-container">
+                  <tbody><tr>
+                    <td style="padding: 10px 0 10px 20px; text-align: left">
+                      <a href="http://www.lmde.fr" title="Accéder au site de la LMDE"><img src="[$PORTAL_URL$]/lmde-theme/images/lmde/logo-lmde-mobile.jpg" width="143" height="43" alt="Accéder au site de la LMDE" border="0"></a>
+                    </td>
+					<td style="padding: 10px 20px 10px 0; text-align: right">
+                      <a href="[$PORTAL_URL$]/espace-personnel/authentification" title="Accéder à My LMDE"><img src="[$PORTAL_URL$]/lmde-theme/images/lmde/mylmde.png" width="146" height="49" alt="My LMDE" border="0"></a>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table bgcolor="#951b81" align="center" width="100%">
+            <tr>
+              <td>
+                <table align="center" width="700" class="email-container">
+                  <tbody><tr>
+                    <td style="padding: 35px 20px; text-align: left; font-family: sans-serif; font-size: 32px; mso-height-rule: exactly; color: #ffffff; font-weight:bold">
+                      Demande de réception de relevés PDF
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+          <!-- Email Header : END -->
+
+          <!-- Email Body : BEGIN -->
+          <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="700" class="email-container">
+
+            <!-- Thumbnail Right, Text Left : BEGIN -->
+            <tbody><tr>
+              <td dir="ltr" align="center" valign="top" width="100%" style="padding: 10px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tbody><tr>
+                    <td width="58%" class="stack-column-center" valign="top">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                          <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding: 10px; text-align: left;">
+                            <p style="font-size:30px; line-height: 32px; color:#951b81;">Bonjour [$USER_FIRST_NAME$]</p>
+                            <p>
+                              Suite à ta demande sur ton espace MyLMDE, tu trouveras en pièce jointe ton décompte de remboursement de frais de santé pour la période du [$DATE_DEBUT_PERIODE$] au [$DATE_FIN_PERIODE$].
+                            </p>
+							<br>               
+							<p>
+                              <a href="[$PORTAL_URL$]/web/guest/espace-personnel/aide-espace-personnel" title="Consulter notre aide" style="color:#b54ba3; text-decoration:underline;">En cas de difficulté, consultez notre aide ou prenez contact avec nous.</a>
+                            </p>
+                            <p>
+                              L’équipe de La Mutuelle Des Etudiants
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </td>
+                    <td width="42%" class="stack-column-center" valign="top">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                          <td dir="ltr" valign="top" width="256" style="padding: 10px; font-family: sans-serif; font-size: 13px; mso-height-rule: exactly; line-height: 20px; color: #dddddd; text-align: left;">
+                            <table bgcolor="#951b81" align="center" cellpadding="0" cellspacing="0" width="100%">
+                              <tbody><tr>
+                                <td width="265" colspan="2" style="text-align:left">
+                                  <img src="[$PORTAL_URL$]/lmde-theme/images/lmde/email-contact0.jpg" width="264" height="81" alt="Nous pouvons vous aider" border="0">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2" style="padding:10px 29px; color: #ffffff; font-size: 14px; font-family: sans-serif;">N'hésitez pas à rentrer en contact avec nous du lundi au vendredi de 8h à 18h.</td>
+                              </tr>
+                              <tr>
+                                <td width="132" style="text-align:right;">
+                                  <a href="[$PORTAL_URL$]/group/guest/espace-personnel#mamessagerie" title="Par email" style="text-decoration:none; color:#ffffff; font-family: sans-serif; font-size: 14px; font-weight: bold;">
+                                    <img src="[$PORTAL_URL$]/lmde-theme/images/lmde/email-contact1.jpg" width="132" height="60" alt="Par email" border="0">
+                                    <p style="margin-bottom:10px; margin-right:13px">Contact email</p>
+                                  </a>
+                                </td>
+                                <td width="132" style="text-align:left;">
+                                  <a href="[$PORTAL_URL$]/contact/telephone" title="Par téléphone" style="text-decoration:none; color:#ffffff; font-family: sans-serif; font-size: 14px; font-weight: bold;">
+                                    <img src="[$PORTAL_URL$]/lmde-theme/images/lmde/email-contact2.jpg" width="132" height="60" alt="Par téléphone" border="0">
+                                    <p style="margin-bottom:10px; margin-left:22px">Téléphone</p>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="132" style="text-align:right">
+                                  <a href="[$PORTAL_URL$]/contact/recherche-agence" title="En agence" style="text-decoration:none; color:#ffffff; font-family: sans-serif; font-size: 14px; font-weight: bold;">
+                                    <img width="132" height="60" border="0" alt="En agence" src="[$PORTAL_URL$]/lmde-theme/images/lmde/email-contact3.jpg">
+                                  <p style="margin-bottom:10px; margin-top:1px; margin-right:10px">Mon agence</p>
+                                  </a>
+                                </td>
+								<td width="132" style="text-align:left">
+                                </td>                              
+							  </tr>
+                              <tr>
+                                <td colspan="2" height="40">&nbsp;</td>
+                              </tr>
+                            </tbody></table>
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+            <!-- Thumbnail Right, Text Left : END -->
+
+          </tbody></table>
+          <!-- Email Body : END -->
+
+          <!-- Email Footer : BEGIN -->
+          <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#5e5e5e" width="100%">
+            <tbody><tr>
+              <td>
+                <table align="center" width="700" class="email-container">
+                  <tbody><tr>
+                    <td style="padding: 20px;width: 100%;font-size: 14px; font-family: sans-serif; mso-height-rule: exactly; line-height:18px;">
+                      <!-- <webversion style="color:#cccccc; text-decoration:underline; font-weight: bold;">Voir sur internet</webversion> -->
+                      <!-- LMDE<br><span class="mobile-link--footer">123 Fake Street, SpringField, OR, 97477 US</span><br><span class="mobile-link--footer">(123) 456-7890</span> -->
+					<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td colspan="5">
+                            <img src="[$PORTAL_URL$]/lmde-theme/images/lmde/email-retrouveznous.jpg" width="217" height="38" alt="Retrouvez-nous" border="0" class="fluid" style="margin-bottom:5px;">
+                            <p style="color:#dddddd; font-size:15px; font-family: sans-serif;">Nous serons toujours disponibles pour répondre à vos sollicitations</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align:center;">
+                            <a href="https://www.facebook.com/LMDE.LaMutuelleDesEtudiants" title="Sur Facebook" style="color:#ffffff; text-decoration:none;">
+                              <img src="[$PORTAL_URL$]/lmde-theme/images/lmde/email-social1.jpg" width="82" height="70" alt="Sur Facebook" border="0" class="fluid-centered" style="display:block; margin-left:auto; margin-right:auto;">
+                              <p class="hide" style="font-size:16px; font-weight: bold; font-family: sans-serif;">Facebook</p>
+                            </a>
+                          </td>
+                          <td style="text-align:center;">
+                            <a href="https://twitter.com/la_lmde" title="Sur Twitter" style="color:#ffffff; text-decoration:none;">
+                              <img src="[$PORTAL_URL$]/lmde-theme/images/lmde/email-social2.jpg" width="82" height="70" alt="Sur Twitter" border="0" class="fluid-centered" style="display:block; margin-left:auto; margin-right:auto;">
+                              <p class="hide" style="font-size:16px; font-weight: bold; font-family: sans-serif;">Twitter</p>
+                            </a>
+                          </td>
+                          <td style="text-align:center;">
+                            <a href="https://plus.google.com/106910126386368302408" title="Sur Google +" style="color:#ffffff; text-decoration:none;">
+                              <img src="[$PORTAL_URL$]/lmde-theme/images/lmde/email-social3.jpg" width="82" height="70" alt="Sur Google +" border="0" class="fluid-centered" style="display:block; margin-left:auto; margin-right:auto;">
+                              <p class="hide" style="font-size:16px; font-weight: bold; font-family: sans-serif;">Google +</p>
+                            </a>
+                          </td>
+                          <td style="text-align:center;">
+                          </td>
+                          <td style="text-align:center;">
+                          </td>
+                        </tr>
+                      </table>
+                      <br>
+                      <!-- <hr style="margin-top:40px; margin-bottom:25px; border-width:1px; border-color: #888888;"> -->
+                      <p style="text-align:center; color:#ffffff;">LMDE © 2016</p>
+                      <!-- <unsubscribe style="color:#888888; text-decoration:underline;">se désinscrire</unsubscribe> -->
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+          <!-- Email Footer : END -->
+
+        </center>
+      </td></tr></tbody></table>
+    
+    
+</body></html>

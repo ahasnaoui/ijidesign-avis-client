@@ -1,0 +1,119 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.orange.oab.lmde</groupId>
+		<artifactId>lmde-liferay</artifactId>
+		<version>1.33.16-SNAPSHOT</version>
+	</parent>
+	<artifactId>lmde-extensions-impl</artifactId>
+
+	<packaging>jar</packaging>
+	<name>Portail LMDE - Extensions du Portal Impl</name>
+	<description>Module d'extension des composants du portal-impl</description>
+
+	<dependencies>
+		<!-- Liferay -->
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-java</artifactId>
+		</dependency>
+
+		<!-- J2EE -->
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <scope>provided</scope>
+		</dependency>
+
+		<!-- LMDE -->
+		<dependency>
+			<groupId>com.orange.oab.lmde</groupId>
+			<artifactId>lmde-util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.orange.oab.lmde</groupId>
+			<artifactId>lmde-ws-authentification</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.orange.oab.lmde</groupId>
+			<artifactId>lmde-ws-personne</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.orange.oab.lmde</groupId>
+			<artifactId>lmde-ws-contrat</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.orange.oab.lmde</groupId>
+			<artifactId>lmde-service-util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.orange.oab.lmde</groupId>
+			<artifactId>lmde-liferay-lien-contact-portlet-service</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.orange.oab.lmde</groupId>
+			<artifactId>lmde-liferay-lien-lexique-portlet-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.orange.oab.lmde</groupId>
+			<artifactId>lmde-liferay-service-portlet-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>deploy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<configuration>
+									<target>
+										<copy file="${project.build.directory}/${project.build.finalName}.jar" tofile="${liferay.app.server.portal.root.lib}/${project.artifactId}.jar" overwrite="true" />
+									</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
